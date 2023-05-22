@@ -1,26 +1,26 @@
 /*
-    SPDX-FileCopyrightText: %{CURRENT_YEAR} %{AUTHOR} <%{EMAIL}>
+    SPDX-FileCopyrightText: %{CURRENT_YEAR} meisme-dev <meisme.mail@protonmail.com>
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
+import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import QtQuick.Controls 2.0
 
 Item {
-    Plasmoid.fullRepresentation: ColumnLayout {
+    id: root
+    width: 30
+    Plasmoid.fullRepresentation: RowLayout {
         anchors.fill: parent
-        Image {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            fillMode: Image.PreserveAspectFit
-            source: "../images/pairs.svgz"
-        }
         PlasmaComponents.Label {
             Layout.alignment: Qt.AlignCenter
-            text: "This is Plasma!"
+            text: "Custom panel"
+        }
+        Button {
+            text: "test"
         }
     }
 }
